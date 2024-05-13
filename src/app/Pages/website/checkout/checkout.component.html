@@ -1,0 +1,28 @@
+<h3 style="text-align: center; color:rgb(4, 229, 245);">Product Detail</h3>
+<div class="container">
+    <div class="row" *ngFor="let product of aproductlist">
+        <div class="col-lg-6 col-md-8 product-details">
+            <!-- Product Image -->
+            <img class="img-fluid" [src]="product.productImageUrl" alt="Product Image">
+        </div>
+       
+        <div class="col-lg-6 col-md-8 product-details">
+            <!-- Product Details -->
+            <p><strong>Product Name:</strong> {{ product.productName }}</p>
+            <p><strong>Price: ₹</strong>{{ product.productPrice }}</p>
+            <p><strong>Description:</strong> {{ product.deliveryTimeSpan }}</p>
+            <p><strong>Product deliveryTimeSpan:</strong> {{ product.productShortName }}</p>
+            <p><strong>Product SKU:</strong> {{ product.productSku }}</p>
+            <p><strong>Description:</strong> {{ product.productDescription }}</p>
+            <!-- Add to Cart Button -->
+            <button class="btn btn-primary">Add to Cart</button>
+        </div>
+    </div>
+</div>
+<style>
+    .product-details {
+    border: 1px solid #ddd; /* Add border with desired style and color */
+    padding: 20px; /* Add padding for spacing */
+    margin-bottom: 20px; /* Add margin bottom for spacing between product details */
+}
+</style>
